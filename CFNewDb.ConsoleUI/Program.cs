@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CFNewDb.Logic;
+//using CFNewDb.Logic;
 using System.Data.Entity;
+using DbFirst;
 
 namespace CFNewDb.ConsoleUI
 {
@@ -12,11 +13,11 @@ namespace CFNewDb.ConsoleUI
     {
         static void Main(string[] args)
         {
-            using (var db = new ShopContext())
+            using (var db = new DbFirst.ShoppingContext())
             {
                 // Create and save a new Product 
 
-                var apple = new Product { Name = "Pineapple",  Price = 1.22m, Description = "Green, yellow and tasty!", Category = ProductCategory.edible };
+                var apple = new DbFirst.Product { Name = "Pineapple",  Price = 1.22m, Description = "Green, yellow and tasty!", Category = 0 };
                 db.Products.Add(apple);
                 db.SaveChanges();
 

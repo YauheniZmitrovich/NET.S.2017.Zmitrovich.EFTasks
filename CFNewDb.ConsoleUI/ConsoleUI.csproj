@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B7E969E6-F9D9-4FA9-BA08-FB6BAE672780}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CFNewDb.Logic</RootNamespace>
-    <AssemblyName>CFNewDb.Logic</AssemblyName>
+    <ProjectGuid>{D83B9890-503C-47AB-BD88-2113625618C5}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ConsoleUI</RootNamespace>
+    <AssemblyName>CFNewDb.ConsoleUI</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -47,32 +49,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201708140102106_InitialCreate.cs" />
-    <Compile Include="Migrations\201708140102106_InitialCreate.Designer.cs">
-      <DependentUpon>201708140102106_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708140150058_SampleMigrations.cs" />
-    <Compile Include="Migrations\201708140150058_SampleMigrations.Designer.cs">
-      <DependentUpon>201708140150058_SampleMigrations.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Order.cs" />
-    <Compile Include="Product.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Purchase.cs" />
-    <Compile Include="ShopContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201708140102106_InitialCreate.resx">
-      <DependentUpon>201708140102106_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708140150058_SampleMigrations.resx">
-      <DependentUpon>201708140150058_SampleMigrations.cs</DependentUpon>
-    </EmbeddedResource>
+    <ProjectReference Include="..\CFNewDb.Logic\CFNewDb.csproj">
+      <Project>{b7e969e6-f9d9-4fa9-ba08-fb6bae672780}</Project>
+      <Name>CFNewDb</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DbFirst\DbFirst.csproj">
+      <Project>{a82cf803-3147-4847-bcb1-373f60d5e1d6}</Project>
+      <Name>DbFirst</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

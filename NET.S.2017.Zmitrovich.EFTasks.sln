@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CFNewDb.Logic", "CFNewDb.Logic\CFNewDb.Logic.csproj", "{B7E969E6-F9D9-4FA9-BA08-FB6BAE672780}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CFNewDb", "CFNewDb.Logic\CFNewDb.csproj", "{B7E969E6-F9D9-4FA9-BA08-FB6BAE672780}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CFNewDb.ConsoleUI", "CFNewDb.ConsoleUI\CFNewDb.ConsoleUI.csproj", "{D83B9890-503C-47AB-BD88-2113625618C5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleUI", "CFNewDb.ConsoleUI\ConsoleUI.csproj", "{D83B9890-503C-47AB-BD88-2113625618C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbFirst", "DbFirst\DbFirst.csproj", "{A82CF803-3147-4847-BCB1-373F60D5E1D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{D83B9890-503C-47AB-BD88-2113625618C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D83B9890-503C-47AB-BD88-2113625618C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D83B9890-503C-47AB-BD88-2113625618C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A82CF803-3147-4847-BCB1-373F60D5E1D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A82CF803-3147-4847-BCB1-373F60D5E1D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A82CF803-3147-4847-BCB1-373F60D5E1D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A82CF803-3147-4847-BCB1-373F60D5E1D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
